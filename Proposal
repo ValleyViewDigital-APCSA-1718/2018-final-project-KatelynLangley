@@ -1,0 +1,12 @@
+   The game that I want to create for my final, is a text adventure, like the old Zork games. But, the twist I want to have, and story I 
+want to convey, is going to be like an escape room. Most text adventures you have to think about where and what you want and have to look 
+at, but also mainly use your imagination, which could go well for a mystery game as well.
+
+  The player will be able to use the commands “go”, “look”, “take”, “use”, “open”, and “close”. I will also create “inventory”, which will 
+allow the player to look at the items that they have already taken, and are currently in their possession. It will be a single player game,
+but it would have to be played in one sitting. By using the items they pick up throughout the game, they’ll be able to go further and 
+further into the room, and eventually escape if enough clues and tools are used and found.
+
+  The premise of the game will be you woke up in what looks like someone’s room, but the door is locked. You have to find a way out,
+and through your search, you find the horrors of the place you woke up in.
+
