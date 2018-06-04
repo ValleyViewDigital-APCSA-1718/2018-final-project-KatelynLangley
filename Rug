@@ -1,0 +1,22 @@
+/**
+ * Katelyn Langley
+ */
+
+import java.util.*;
+
+public class Rug extends Place
+{
+    public Rug()
+    {
+        name = "rug";
+    }//end Rug()
+    public ArrayList<Action> Actions()
+    {
+        ArrayList<Action> actions = new ArrayList<Action>();
+        if(name.equals("burnt rug"))
+        {
+            actions.add(new Action("take key", "You take the key hidden under the rug.", new SkeletonKey(), this, false));
+        }//end if
+        return actions;
+    }//end Actions()
+}//end class Rug
