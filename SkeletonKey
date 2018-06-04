@@ -1,0 +1,19 @@
+/**
+ * Katelyn Langley
+ */
+
+public class SkeletonKey extends Item
+{
+    public void updatePlace(Place place)
+    {
+        place.name = "unlocked door";
+    }//end updatePlace()
+    public Action checkPlaceForAction(Place place)
+    {
+        if(place.name.equals("door"))
+        {
+            return new ItemAction("use key", "You put the key into the door, unlocking it.", this, place, false);
+        }//end if
+        return null;
+    }//end checkPlaceForAction()
+}//end class Key
