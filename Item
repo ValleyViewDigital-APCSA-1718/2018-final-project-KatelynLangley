@@ -1,0 +1,14 @@
+/**
+ * Katelyn Langley
+ */
+
+public abstract class Item
+{
+    public Action checkPlaceForAction(Place place)
+    {
+        return null;
+    }//end checkPlaceForAction()
+    public void updatePlace(Place place)
+    {
+    }//end updatePlace()
+}//end class Item
