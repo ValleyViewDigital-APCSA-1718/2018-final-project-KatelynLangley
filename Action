@@ -1,0 +1,28 @@
+/**
+ * Katelyn Langley
+ */
+
+public class Action
+{
+    public String command;
+    public String description;
+    public Place place;
+    public Item item;
+    public boolean hasWon;
+    public Action(String command, String description, Item item, Place place, boolean hasWon)
+    {
+        this.command = command;
+        this.description = description;
+        this.place = place;
+        this.item = item;
+        this.hasWon = hasWon;
+    }//end Action
+    public void makeInvalid()
+    {
+        description = "You can't do that anymore.";
+        item = null;
+    }//end makeInvalid()
+    public void execute(Place place)
+    {
+    }//end execute()
+}//end class Action
