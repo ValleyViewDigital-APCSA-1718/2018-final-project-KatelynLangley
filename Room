@@ -1,0 +1,12 @@
+/**
+ * Katelyn Langley
+ */
+
+import java.util.*;
+
+public interface Room
+{
+    public Action searchActions(String input, ArrayList<Item> inventory);
+    public void printDescription();
+    public void executeActionInPlace(Action actions);
+}//end Room
