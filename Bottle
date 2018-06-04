@@ -1,0 +1,22 @@
+/**
+ * Katelyn Langley
+ */
+
+public class Bottle extends Item
+{
+    public void updatePlace(Place place)
+    {
+        place.name = "wet rug";
+    }//end updatePlace()
+    public Action checkPlaceForAction(Place place)
+    {
+        if (place.name == null)
+        {
+        }//end first if
+        if(place.name.equals("rug"))
+        {
+            return new ItemAction("use bottle", "You pour the containments of the bottle onto the rug, soaking it entirely.", this, place, false);
+        }//end second if
+        return null;
+    }//end checkPlaceForAction()
+}//end class Bottle
