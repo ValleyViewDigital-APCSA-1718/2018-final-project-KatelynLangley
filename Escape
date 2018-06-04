@@ -1,0 +1,57 @@
+/**
+ * Katelyn Langley
+ * Period 5/APCSA
+ * Rioux
+ * 06/04/18
+ */
+
+import java.util.*;
+
+public class Escape
+{
+    Scanner keyboard = new Scanner(System.in);
+        
+    String action1;
+    ArrayList<Item> inventory = new ArrayList<Item>();
+    Room currentRoom = new Bedroom();
+    
+    public static void main (String[]args)
+    {
+        System.out.println("-------------------------------------------");
+        System.out.println("\tCan you escape?");
+        System.out.println("-------------------------------------------");
+        
+        Escape game;
+        game = new Escape();
+        
+        game.startGame();
+    }//end method main
+    public void startGame()
+    {
+       System.out.println("You wake up, rubbing the sleep out of your eyes.\nYou realize you aren't in your own bedroom, but\nin one you have never seen before.");
+       System.out.println(" ");
+       currentRoom.printDescription();
+       boolean stillTrapped = true;
+        do
+        {
+            
+        action1 = keyboard.nextLine();
+        Action action = currentRoom.searchActions(action1, inventory);
+        if(action == null)
+        {
+            System.out.println("I don't understand what you're trying to say, please try again.");
+        }//end if
+        else
+        {
+            System.out.println(action.description);
+            currentRoom.executeActionInPlace(action);
+            if(action.item != null)
+            {
+                inventory.add(action.item);
+                action.makeInvalid();
+            }//end inner if
+            stillTrapped = !action.hasWon;
+        }//end else
+       }while(stillTrapped);
+    }//end startGame()
+}//end class Escape
