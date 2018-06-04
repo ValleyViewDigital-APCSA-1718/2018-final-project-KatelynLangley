@@ -1,0 +1,27 @@
+/**
+ * Katelyn Langley
+ */
+
+import java.util.*;
+
+public class Bedroom extends BaseRoom
+{
+    Desk desk = new Desk();
+    Bookcase bookcase = new Bookcase();
+    Rug rug  = new Rug();
+    Door door = new Door();
+    public void printDescription()
+    {
+        System.out.println("There is a nightstand next to you with a note on\ntop of it, a desk to the    left with a book case\nnext to it, and a rug in front of the door to your\nright.");
+    }//end printDescription()
+    ArrayList<Action> Actions()
+    {
+        return new ArrayList<Action>(Arrays.asList(
+            new Action("look at desk", "On the desk is an array of papers, neatly stacked together or sticking out the sides of the books on the desk, mostly containing research notes and other different scientific studies on the human system. In the corner, there is a glass bottle with some sort of liquid inside, and a glass next to it.", null, desk, false),
+            new Action("look at bookcase", "The bookcase has various books and nicknacks inside it, mostly scientific related. In a corner of the bookcase, you see a box of matches.", null, bookcase, false),
+            new Action("look at rug", "The rug is an old brown color with silver stitching at the edges. There is a slight bulge underneath it, but the rug is too heavy to pick up.", null, rug, false),
+            new Action("look at door", "The door is a deep set brown, with iron for its metal intricacies. There is no peephole to look out, and the mail slot looks like it was welded shut years ago. There is a single key slot underneath the handle. ", null, door, false)
+            
+            ));
+    }//end Actions()
+}//end class Bedroom
