@@ -1,0 +1,19 @@
+/**
+ * Katelyn Langley
+ */
+
+public class Matches extends Item
+{
+    public void updatePlace(Place place)
+    {
+        place.name = "burnt rug";
+    }//end updatePlace()
+    public Action checkPlaceForAction(Place place)
+    {
+        if(place.name.equals("wet rug"))
+        {
+            return new ItemAction("use matches", "You light the matches on the rug and it burns away, revealing a key underneath it.", this, place, false);
+        }//end if
+        return null;
+    }//end checkPlaceForAction()
+}//end class Matches
