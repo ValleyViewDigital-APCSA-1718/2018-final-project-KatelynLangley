@@ -1,0 +1,19 @@
+/**
+ * Katelyn Langley
+ */
+
+import java.util.*;
+
+public class Bookcase extends Place
+{
+    public Bookcase()
+    {
+        name = "bookcase";
+    }//end Bookcase()
+    public ArrayList<Action> Actions()
+    {
+        return new ArrayList<Action>(Arrays.asList(
+            new Action("take matches", "You take the matches from the bookcase", new Matches(), this, false)
+        ));
+    }//end Actions()
+}//end class Bookcase
