@@ -1,0 +1,45 @@
+/**
+ * Katelyn Langley
+ */
+
+import java.util.*;
+
+public abstract class BaseRoom extends BaseArea implements Room
+{   
+    private Place currentPlace;
+    public Action searchActions(String input, ArrayList<Item> inventory)
+    {           
+        ArrayList<Action> actions = new ArrayList<Action>();
+        actions.addAll(Actions());
+        
+        if(currentPlace != null)
+        {
+            actions.addAll(currentPlace.Actions());
+            for(Item item : inventory)
+            {
+                Action itemAction = item.checkPlaceForAction(currentPlace);
+                if(itemAction != null)
+                {
+                    actions.add(itemAction);
+                }//end inner if
+            }//end inner for
+        }//end if
+        
+        for(Action action : actions)
+        {
+            if(input.equals(action.command))
+            {
+                currentPlace = action.place;
+                return action;
+            }//end inner if
+        }//end for
+        return null;
+    }//end searchActions()
+    public void executeActionInPlace(Action actions)
+    {
+        if(currentPlace != null)
+        {
+          actions.execute(currentPlace);
+        }//end if
+    }//end executeActionInPlace()
+}//end class BaseRoom
