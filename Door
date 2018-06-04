@@ -1,0 +1,22 @@
+/**
+ * Katelyn Langley
+ */
+
+import java.util.*;
+
+public class Door extends Place
+{
+    public Door()
+    {
+        name = "door";
+    }//end Door()
+    public ArrayList<Action> Actions()
+    {
+        ArrayList<Action> actions = new ArrayList<Action>();
+        if(name.equals("unlocked door"))
+        {
+            actions.add(new Action("use door", "You open the door, sunlight streaming in. You have escaped!", null, this, true));
+        }//end if
+        return actions;
+    }//end Actions()
+}//end class Door
