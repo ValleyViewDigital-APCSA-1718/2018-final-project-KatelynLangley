@@ -1,0 +1,19 @@
+/**
+ * Katelyn Langley
+ */
+
+import java.util.*;
+
+public class Nightstand extends Place
+{
+    public Nightstand()
+    {
+        name = "nightstand";
+    }//end Nightstand()
+    public ArrayList<Action> Actions()
+    {
+        return new ArrayList<Action>(Arrays.asList(
+            new Action("read note", "You look at the note, which says\nDear Lovely,\n\tAn event has occured, and I need to set out for\n\ta bit. I have locked the door, so there is\n\tno reason to leave. Sit tight, I will\n\tbe back soon.\nYour Dearest,\n\tDr. Zola", null, this, false)
+        ));
+    }//end Actions()
+}//end class Nightstand
