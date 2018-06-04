@@ -1,0 +1,10 @@
+/**
+ * Katelyn Langley
+ */
+
+import java.util.*;
+
+public abstract class Place extends BaseArea
+{
+    public String name;
+}//end class Place
