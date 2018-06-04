@@ -1,0 +1,18 @@
+/**
+ * Katelyn Langley
+ */
+
+public class ItemAction extends Action
+{
+    private Item currentItem;
+    public ItemAction(String command, String description, Item item, Place place, boolean hasWon)
+    {
+       super(command, description, null, place, hasWon);
+       currentItem = item;
+    }//end Action
+    @Override
+    public void execute(Place place)
+    {
+        currentItem.updatePlace(place);
+    }//end execute()
+}//end class ItemAction
