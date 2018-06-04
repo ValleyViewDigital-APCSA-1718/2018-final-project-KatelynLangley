@@ -1,0 +1,19 @@
+/**
+ * Katelyn Langley
+ */
+
+import java.util.*;
+
+public class Desk extends Place
+{
+    public Desk()
+    {
+        name = "desk";
+    }//end Desk()
+    public ArrayList<Action> Actions()
+    {
+        return new ArrayList<Action>(Arrays.asList(
+            new Action("take bottle", "You take the bottle from the desk", new Bottle(), this, false)
+        ));
+    }//end Actions()
+}//end class Desk
