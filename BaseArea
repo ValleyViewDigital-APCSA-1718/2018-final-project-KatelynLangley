@@ -1,0 +1,10 @@
+/**
+ * Katelyn Langley
+ */
+
+import java.util.*;
+
+public abstract class BaseArea
+{
+    abstract ArrayList<Action> Actions();
+}//end class BaseArea
